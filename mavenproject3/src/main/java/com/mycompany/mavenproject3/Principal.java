@@ -15,5 +15,6 @@ public class Principal {
         ProcessarBoletos  processar = new ProcessarBoletos(LeituraRetorno::lerArquivoBB);
         processar.processar("banco-brasil-1.csv");
         processar.setLerArquivo(LeituraRetorno::lerArquivoBradesco);
+        processar.processar("bradesco.csv");
     }
 }
