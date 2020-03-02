@@ -14,5 +14,6 @@ public class Principal {
         // Utilizando :: não chama a função e sim informa da existencia da função
         ProcessarBoletos  processar = new ProcessarBoletos(LeituraRetorno::lerArquivoBB);
         processar.processar("banco-brasil-1.csv");
+        processar.setLerArquivo(LeituraRetorno::lerArquivoBradesco);
     }
 }

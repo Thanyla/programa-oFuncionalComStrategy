@@ -17,4 +17,9 @@ public class LeituraRetorno {
         System.out.println("Lendo arquivo do BB");
         return new ArrayList<>();
     }
+    
+    public static List<Boleto> lerArquivoBradesco(String nome){
+        System.out.println("Lendo arquivo do Bradesco");
+        return new ArrayList<>();
+    }
 }
