@@ -13,11 +13,17 @@ public class ProcessarBoletos {
     //Primeiro generico especifica o tipo de entrada e o segundo o retorno 
     private Function<String, List<Boleto>> lerArquivo;
     
+    public ProcessarBoletos(Function<String, List<Boleto>> lerArquivo) {
+        this.lerArquivo = lerArquivo;
+    }
+
     public void processar(String nomeArquivo){
         System.out.println("Iniciando processamento do arquivo");
         List<Boleto> boletos = lerArquivo.apply(nomeArquivo);
-        for (Boleto boleto : boletos) {
-            System.out.println(boleto);
-        }
+        boletos.forEach(boleto -> System.out.println(boleto));
+    }
+    
+    public void setLerArquivo(Function<String, List<Boleto>> lerArquivo) {
+        this.lerArquivo = lerArquivo;
     }
 }
