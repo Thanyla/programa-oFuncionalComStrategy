@@ -5,12 +5,16 @@
  */
 package com.mycompany.mavenproject3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author aluno
  */
-public class Principal {
-    public static void main(String[] args) {
-        
+public class LeituraRetorno {
+    public static List<Boleto> lerArquivoBB(String nome){
+        System.out.println("Lendo arquivo do BB");
+        return new ArrayList<>();
     }
 }
