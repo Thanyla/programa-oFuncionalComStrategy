@@ -25,10 +25,13 @@ public class Principal {
         List<Boleto> boletos = new ArrayList<>();
         boletos.add(new Boleto (1, "234"));
         boletos.add(new Boleto (2, "553"));
-        boletos.add(new Boleto (3, "423"));
+        boletos.add(new Boleto (2, "423"));
         boletos.add(new Boleto (4, "545"));
         
-        boletos.sort(Comparator.comparingInt(Boleto::getId));
+        boletos.sort(
+                Comparator.comparingInt(Boleto::getId)
+                .thenComparing(Boleto::getAgencia)
+        );
         System.out.println(boletos);
         
     }
