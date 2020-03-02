@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author aluno
+ * @author Thanyla
  */
 public class LeituraRetorno {
     public static List<Boleto> lerArquivoBB(String nome){

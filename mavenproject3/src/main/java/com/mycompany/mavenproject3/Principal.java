@@ -7,10 +7,12 @@ package com.mycompany.mavenproject3;
 
 /**
  *
- * @author aluno
+ * @author Thanyla
  */
 public class Principal {
     public static void main(String[] args) {
-        
+        // Utilizando :: não chama a função e sim informa da existencia da função
+        ProcessarBoletos  processar = new ProcessarBoletos(LeituraRetorno::lerArquivoBB);
+        processar.processar("banco-brasil-1.csv");
     }
 }
