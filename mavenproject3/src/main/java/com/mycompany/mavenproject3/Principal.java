@@ -5,6 +5,10 @@
  */
 package com.mycompany.mavenproject3;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  *
  * @author Thanyla
@@ -16,5 +20,16 @@ public class Principal {
         processar.processar("banco-brasil-1.csv");
         processar.setLerArquivo(LeituraRetorno::lerArquivoBradesco);
         processar.processar("bradesco.csv");
+        
+        //Exemplo de padrão satrategy dentro das bibliotecas java, no caso na List, no método comparator
+        List<Boleto> boletos = new ArrayList<>();
+        boletos.add(new Boleto (1, "234"));
+        boletos.add(new Boleto (2, "553"));
+        boletos.add(new Boleto (3, "423"));
+        boletos.add(new Boleto (4, "545"));
+        
+        boletos.sort(Comparator.comparingInt(Boleto::getId));
+        System.out.println(boletos);
+        
     }
 }
